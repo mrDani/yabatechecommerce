@@ -26,7 +26,7 @@ function SearchBox() {
                         
                     />
                 </div>
-                <div className='col-sm-2 style'>
+                <span className='col-sm-2 style'>
                     <Button
                         type='submit'
                         variant='outline-success'
@@ -35,7 +35,7 @@ function SearchBox() {
                     >
                         
                     </Button>
-                </div>
+                </span>
 
 
             </Form.Group>

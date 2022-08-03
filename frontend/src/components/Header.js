@@ -25,16 +25,14 @@ function Header() {
                     </LinkContainer>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Collapse id="basic-navbar-nav" className="ml-auto navland bg-dark text-light">
                         <SearchBox/>
-                        <Nav className="ml-auto navland">
-
                             <LinkContainer to='/cart'>
-                                <Nav.Link ><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
+                                <Nav.Link className="text-light"><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
                             </LinkContainer>
 
                             {userInfo ? (
-                                <NavDropdown title={userInfo.name} id='username'>
+                                <NavDropdown title={userInfo.name} id='username' className="bg-white">
                                     <LinkContainer to='/profile'>
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
                                     </LinkContainer>
@@ -47,10 +45,9 @@ function Header() {
                                         <Nav.Link><i className="fas fa-user"></i>Login</Nav.Link>
                                     </LinkContainer>
                                 )}
-
-
+                                
                             {userInfo && userInfo.isAdmin && (
-                                <NavDropdown title='Admin' id='adminmenue'>
+                                <NavDropdown title='Admin' id='adminmenue' className="bg-white">
                                     <LinkContainer to='/admin/userlist'>
                                         <NavDropdown.Item>Users</NavDropdown.Item>
                                     </LinkContainer>
@@ -65,6 +62,12 @@ function Header() {
 
                                 </NavDropdown>
                             )}
+                        <Nav className="ml-auto navland">
+
+
+
+
+
 
 
                         </Nav>
